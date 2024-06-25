@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--FrameLayout: loại layout đơn giản được sử dụng để xếp chồng các thành phần UI lên nhau. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A191E"
+    tools:context=".Activities.SplashActivity">
+
+<!--ImageView: Kiểm soát hiển thị hình ảnh-->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="408dp"
+        android:layout_height="392dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="30dp"
+        android:background="#1A191E"
+        android:src="@drawable/coffee" />
+
+<!--TextView: Kiểm soát hiển thị văn bản.-->
+    <TextView
+        android:id="@+id/txtCoffeeshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center_horizontal"
+        android:text="Coffee &amp; Breakfast"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+<!--
+android:text="Coffee &amp; Breakfast": Nội dung hiển thị của TextView là "Coffee & Breakfast" (ký tự "&amp;" được hiểu là "&").
+android:fontFamily="@font/bangers": Thiết lập font chữ cho TextView là "bangers" (cần có font này trong thư mục assets).
+-->
+
+
+    <TextView
+        android:id="@+id/txtPowered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="30dp" />
+
+
+</FrameLayout>

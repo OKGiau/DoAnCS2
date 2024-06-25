@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- file XML và sử dụng mã hóa UTF-8.-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"> <!--sử dụng để truy cập các thuộc tính và element của Android.-->
+
+<!--Khối <application> là thẻ gốc của manifest và chứa các thông tin về ứng dụng. Các thuộc tính quan trọng bên trong khối này-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OrderDrinkApp">
+
+ <!--
+android:allowBackup="true": Cho phép sao lưu ứng dụng.
+android:icon="@mipmap/ic_launcher": Xác định icon chính của ứng dụng, được hiển thị trên launcher (màn hình chính) và trong thanh thông báo.
+android:label="@string/app_name": Xác định tên của ứng dụng, được hiển thị trên launcher và trong các nơi khác.
+android:roundIcon="@mipmap/ic_launcher_round": Xác định icon tròn của ứng dụng, được sử dụng trên các thiết bị Android hiện đại.
+android:supportsRtl="true": Cho biết ứng dụng hỗ trợ bố cục RTL (Right-to-Left) cho các ngôn ngữ đọc từ phải sang trái.
+android:theme="@style/Theme.OrderDrinkApp": Xác định theme mặc định của ứng dụng.
+-->
+
+        <activity android:name=".Activities.DetailStatisticActivity"></activity><!--android:name: Xác định tên đầy đủ của lớp Activity-->
+        <activity android:name=".Activities.AddStaffActivity" />
+
+        <activity
+            android:name=".Activities.EditTableActivity"
+            android:label="Sửa bàn ăn"
+            android:theme="@style/PopUpActivity" />
+
+<!--
+android:label: Xác định tiêu đề của Activity, được hiển thị trên thanh tiêu đề.
+android:theme: Xác định theme của Activity, có thể ghi đè lên theme mặc định của ứng dụng.
+-->
+
+        <activity android:name=".Activities.PaymentActivity" />
+        <activity
+            android:name=".Activities.AmountMenuActivity"
+            android:label="số lượng món"
+            android:theme="@style/PopUpActivity" />
+        <activity android:name=".Activities.AddCategoryActivity" />
+        <activity android:name=".Activities.AddMenuActivity" />
+        <activity
+            android:name=".Activities.AddTableActivity"
+            android:label="@string/addTable"
+            android:theme="@style/PopUpActivity" />
+        <activity android:name=".Activities.HomeActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.Register2ndActivity" />
+        <activity android:name=".Activities.WelcomeActivity" />
+        <activity android:name=".Activities.RegisterActivity" />
+
+<!--xác định rằng Activity này là Activity chính (main) của ứng dụng.-->
+        <activity android:name=".Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+<!--
+android:name="android.intent.action.MAIN": Xác định action là MAIN, nghĩa là Activity này có thể được khởi chạy từ launcher.
+android:category="android.intent.category.LAUNCHER": Xác định category là LAUNCHER, nghĩa là Activity này có thể được hiển thị trên launcher.
+-->
+
+<!--<meta-data ...>: Khối <meta-data> cung cấp thông tin bổ sung về ứng dụng. -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+<!--
+android:name="preloaded_fonts": Tên của meta-data.
+android:resource="@array/preloaded_fonts": Trỏ đến một tài nguyên mảng chứa danh sách các font được tải trước
+để cải thiện hiệu suất hiển thị văn bản.
+-->
+
+</manifest>
